@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 44</title>
+    <script>
+        function okno_zamknij_Włodarczak()
+        {
+            window.close();
+        }
+
+        function wyswietlTekst() {
+            var nazwisko = "Włodarczak";
+            var imie = "Olaf";
+            var liczbaLiterNazwiska = nazwisko.length;
+            var iloscWyswietlen = (liczbaLiterNazwiska % 4) + 10;
+            var wielkoscLiter = (liczbaLiterNazwiska % 3) + 40;
+
+            var wynikDiv = document.getElementById('wynik');
+
+            for (var i = 1; i <= iloscWyswietlen; i++) {
+                var tekst = (i % 2 === 1) ? nazwisko : imie;
+                var p = document.createElement('p');
+                p.className = 'tekst';
+                p.style.fontSize = wielkoscLiter + 'px';
+                p.textContent = tekst;
+                wynikDiv.appendChild(p);
+            }
+        }
+
+        window.onload = wyswietlTekst;
+    </script>
+</head>
+<body>
+    <div id="wynik" style="margin-top:20px;"></div>
+    <br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_Włodarczak()"/>
+</body>
+</html>
