@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function okno_zamknij_Włodarczak()
+        {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+    <div style="color: red; font-size: 50px;">
+        <script language="JavaScript">
+            var a = parseFloat(prompt("a=",""));
+            var b = parseFloat(prompt("b=",""));
+            var c = parseFloat(prompt("c=",""));
+            if((a>0)&&(b>0)&&(c>0)&&(a+b>c)&&(a+c>b)&&(c+b>a)){
+                document.write("Trójkąt się zamyka");
+            }else{
+                document.write("Trojkąt się nie zamyka");
+            }
+        </script>
+    </div>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_Włodarczak()"/>
+</body>
+</html>
