@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function okno_zamknij_Włodarczak()
+        {
+            window.close()
+        }
+        var a_WŁO = 5;
+        var b_WŁO = 25;
+    </script>
+</head>
+<body>
+    <script>
+        for(var i=1; i<b_WŁO; i++){
+            document.write("*");
+        }
+        for(var i=-1; i<a_WŁO; i++){
+            document.write("*" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "*" + "<br>");
+        }
+        for(var i=1; i<b_WŁO ; i++){
+            document.write("*");
+        }
+    </script>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_Włodarczak()"/>
+</body>
+</html>
