@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przykład użycia pętli</title>
+    <script>
+        function okno_zamknij_Włodarczak()
+        {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+    <font style="color: red; font-size: 2cm;">Włodarczak</font><br>
+    <font style="color: blue; font-size: 5mm">Temat: wprowadzanie liczb od 1 do 10 przesuniętych o jedną spację w prawo. Demonstarcja pętli zagnieżdżonych ( czyli pętla w pętli).</font><br><br>
+    <script language="JavaScript">
+        var n_WŁO = parseFloat(prompt("Podaj ile razy powtórzyć",""));
+        var inicialy_WŁO = prompt("Podaj swoje iniciały","");
+        for ( var i=1; i<=n_WŁO; i++){
+            for ( var k=1; k<=i; k++){
+                document.write("&nbsp");
+            }
+            document.write(i + "_" + inicialy_WŁO + "_" + i + "<br>");
+        }
+    </script>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_Włodarczak()"/>
+</body>
+</html>
