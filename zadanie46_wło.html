@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <head>
+        <title>Sprawdzenie danych Twoje nazwisko </title>
+        <meta charset="utf-8">
+        <script>
+            function okno_zamknij_Włodarczak()
+            {
+                window.close()
+            }
+        </script>
+    </head>
+    <body>
+        <div style="color:red;font-size:50px;">
+            <script language="JavaScript">
+                do {
+                    var liczba1=prompt("wysokość=","");
+                    var h_RAD=parseFloat(liczba1);
+                }
+                while ( h_RAD<=0);
+                do {
+                    var liczba1=prompt("podstawę=","");
+                    var a_RAD=parseFloat(liczba1);
+                }
+                while(!( a_RAD>0));
+                var Pole=a_RAD*h_RAD/2;
+                document.write("Pole="+Pole.toFixed(2)+" cm^2"+"<br>");
+            </script>
+        </div>
+        <br><br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Włodarczak()"/>
+    </body>
+</html>
