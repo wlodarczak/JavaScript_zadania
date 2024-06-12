@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 54</title>
+    <script>
+        function okno_zamknij_Włodarczak()
+        {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+    <div id="rysunek" class="gwiazdki"></div>
+
+    <script>
+        function rysujProstokat() {
+            var imie = prompt('Podaj swoje imię:');
+            var nazwisko = prompt('Podaj swoje nazwisko:');
+
+            var liczbaLiterImienia = imie.length;
+            var liczbaLiterNazwiska = nazwisko.length;
+
+            var a = (liczbaLiterNazwiska % 4) + 5;
+            var b = (liczbaLiterImienia % 6) + 20;
+
+            var rysunekDiv = document.getElementById('rysunek');
+            rysunekDiv.innerHTML = '';
+
+            var gornaLinia = '';
+            for (var i = 0; i < b; i++) {
+                gornaLinia += '*';
+            }
+            rysunekDiv.innerHTML += gornaLinia + '<br>';
+
+            for (var i = 0; i < a - 2; i++) {
+                var srodekLinia = '*';
+                for (var j = 0; j < b - 2; j++) {
+                    srodekLinia += '&nbsp;&nbsp;';
+                }
+                srodekLinia += '*';
+                rysunekDiv.innerHTML += srodekLinia + '<br>';
+            }
+
+            var dolnaLinia = '';
+            for (var i = 0; i < b; i++) {
+                dolnaLinia += '*';
+            }
+            rysunekDiv.innerHTML += dolnaLinia;
+        }
+
+        window.onload = rysujProstokat;
+    </script>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_Włodarczak()"/>
+</body>
