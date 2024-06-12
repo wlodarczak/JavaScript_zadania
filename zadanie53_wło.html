@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 53</title>
+    <script>
+        function okno_zamknij_Włodarczak()
+        {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+    <div id="rysunek" class="gwiazdki"></div>
+
+    <script>
+        function rysujProstokat() {
+            var a_WŁO = parseInt(prompt('Podaj wysokość prostokąta (a):'));
+            var b_WŁO = parseInt(prompt('Podaj szerokość prostokąta (b):'));
+
+            if (isNaN(a_WŁO) || isNaN(b_WŁO) || a_WŁO < 2 || b_WŁO < 2) {
+                alert('Podaj poprawne wymiary większe lub równe 2.');
+                return;
+            }
+
+            var rysunek_WŁO = document.getElementById('rysunek');
+            rysunek_WŁO.innerHTML = '';
+
+            var gornaLinia_WŁO = '';
+            for (var i = 0; i < b_WŁO; i++) {
+                gornaLinia_WŁO += '*';
+            }
+            rysunek_WŁO.innerHTML += gornaLinia_WŁO + '<br>';
+
+            var wiersz_WŁO = '*';
+            for (var i = 1; i <= (b_WŁO - 2); i++) {
+                wiersz_WŁO += '&nbsp;&nbsp;';
+            }
+            wiersz_WŁO += '*';
+            for (var i = 1; i <= (a_WŁO - 2); i++) {
+                rysunek_WŁO.innerHTML += wiersz_WŁO + '<br>';
+            }
+
+            var dolnaLinia_WŁO = '';
+            for (var i = 0; i < b_WŁO; i++) {
+                dolnaLinia_WŁO += '*';
+            }
+            rysunek_WŁO.innerHTML += dolnaLinia_WŁO;
+        }
+
+        window.onload = rysujProstokat;
+    </script>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_Włodarczak()"/>
+</body>
+</html>
