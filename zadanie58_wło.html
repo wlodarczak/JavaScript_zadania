@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 58</title>
+    <script>
+        function okno_zamknij_Włodarczak()
+        {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+    <div style="color: red; font-size: 18px;">
+        <script lang="JavaScript">
+            var x = prompt("Podaj liczbę 1=","");
+            var liczba1_WŁO = parseInt(x);
+            var x = prompt("Podaj liczbę 2=","");
+            var liczba2_WŁO = parseInt(x);
+            if(liczba1_WŁO<liczba2_WŁO){
+                for(i=liczba1_WŁO; i<=liczba2_WŁO; i++){
+                    if(i%2==1){
+                        document.write("<p style='font-size: 18px; color: black;'> <br>"+i+"<br></p>");
+                    }
+                }
+            }
+            if (liczba1_WŁO > liczba2_WŁO) {
+                for (let i = liczba1_WŁO; i >= liczba2_WŁO; i--) {
+                    if (i % 2 == 1) {
+                        document.write("<p style='font-size: 9px; color: blue;'><br>" + i + "<br></p>");
+                    }
+                }
+            }
+            if(liczba1_WŁO==liczba2_WŁO){
+                alert("Brak obliczeń");
+            }
+        </script>
+    </div>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_Włodarczak()"/>
+</body>
+</html>
