@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 55</title>
+    <script>
+        function okno_zamknij_Włodarczak()
+        {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+    <div id="wynik"></div>
+
+    <script>
+        function zmienWielkoscTekstu() {
+            var l1_t_WŁO = parseInt(prompt('Podaj pierwszą liczbę z przedziału <20,60>:'));
+                if (l1_t_WŁO < 20 || l1_t_WŁO > 60) {
+                alert('Liczba ' + l1_t_WŁO + ' nie należy do przedziału <20,60>.');
+                return;
+            }
+            var l2_t_WŁO = parseInt(prompt('Podaj drugą liczbę z przedziału <20,60>:'));
+                if (l2_t_WŁO < 20 || l2_t_WŁO > 60) {
+                alert('Liczba ' + l2_t_WŁO + ' nie należy do przedziału <20,60>.');
+                return;
+            }
+            var pocz_WŁO = parseInt(prompt('Podaj początkową wielkość tekstu w pikselach:'));
+            var tekst_WŁO = prompt('Podaj dowolny tekst do wyświetlenia:');
+            
+            var wynikDiv = document.getElementById('wynik');
+            wynikDiv.innerHTML = '';
+
+            var i = pocz_WŁO;
+            if (l1_t_WŁO < l2_t_WŁO) {
+                while (i <= 100) {
+                    wynikDiv.innerHTML += `<p style="font-size:${i}px; color: black;"><br>${tekst_WŁO}<br></p>`;
+                    i += 5;
+                }
+            } else {
+                while (i > 0) {
+                    wynikDiv.innerHTML += `<p style="font-size:${i}px; color: black;"><br>${tekst_WŁO}<br></p>`;
+                    i -= 5;
+                }
+            }
+        }
+
+        window.onload = zmienWielkoscTekstu;
+    </script>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_Włodarczak()"/>
+</body>
+</html>
