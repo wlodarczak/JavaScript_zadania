@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 43</title>
+    <script>
+        function okno_zamknij_Włodarczak()
+        {
+            window.close();
+        }
+
+        function wypiszLiczbyParzyste() {
+            var input = prompt('Podaj liczbę:');
+            var liczba = parseInt(input);
+            var wynikDiv = document.getElementById('wynik');
+            wynikDiv.innerHTML = '';
+
+            if (isNaN(liczba) || liczba < 2) {
+                wynikDiv.innerHTML = '<p>Podaj poprawną liczbę większą lub równą 2.</p>';
+                return;
+            }
+
+            var wynik = '<p>Liczby parzyste od 2 do ' + liczba + ':</p>';
+            for (var i = 2; i <= liczba; i += 2) {
+                wynik += '<p>' + i + '</p>';
+            }
+
+            wynikDiv.innerHTML = wynik;
+        }
+
+        window.onload = wypiszLiczbyParzyste;
+    </script>
+</head>
+<body>
+    <div id="wynik" style="margin-top:20px;"></div>
+    <br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_Włodarczak()"/>
+</body>
+</html>
